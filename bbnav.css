@@ -1,0 +1,88 @@
+#nav, #nav ul { /* all lists */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 1;
+    text-align:center;
+    z-index:99;                
+}
+
+#nav li { /* all list items */
+    float: left;
+    width: 100px; /* width needed or else Opera goes nuts */
+    background-repeat:repeat-x;
+    border:1px solid #cccccc;
+    margin-left:1px;
+    height:30px;                                           
+}
+#nav li ul li {border:0; margin:0; padding:0px; padding-top:5px; padding-bottom:5px; background:none; }
+
+#nav li a {
+    display: block;
+    width:75px;
+    font-size:18px;
+    font-weight:bold;
+    height:30px;
+    position:relative;
+    top:5px;
+    padding:0px;  
+    text-align:center;
+    border:1px;
+    text-decoration: none;
+    color:red;      
+    
+}
+
+
+#nav li ul{ /* all list items */
+    float: left;
+    position: absolute;
+    width: 175px; /* width needed or else Opera goes nuts */
+    /*background-color:#ffffff;*/
+    left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+    font-weight:normal;
+    background-color:#ffebcd;
+    border:px solid #2f2f2f;
+    margin:0;
+    border:0;
+    padding:0;
+            opacity: .8;
+    filter: alpha(opacity=80);
+
+    
+}
+
+#nav li ul li a {text-align:left; color:#ffffff;  font-weight:normal;  padding:0; padding-left:3px; line-height:24px; top:0px;}
+
+#nav li ul li a:hover {background-color:#f00; text-decoration:none; width:172px;         opacity: 1;
+    filter: alpha(opacity=100); line-height:24px; top:0px;}
+
+#nav li:hover ul, #nav li.sfhover ul { /* lists nested under hovered list items */
+    left: auto;
+}
+
+
+#nav li ul ul {     margin: -1.9em 0 0 170px; border:0px solid #cccccc;  top:0px;} 
+
+#nav li:hover ul ul, #nav li.sfhover ul ul {     left: -999em; } 
+
+#nav li:hover ul, #nav li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul {     left: auto; } 
+
+#nav li ul li { /* all list items */
+    float: left;
+    width: 175px; /* width needed or else Opera goes nuts */
+    text-align:left;
+    display:block;
+    font-weight:normal;
+    top:0px;
+    padding:0;
+
+}
+
+#nav li ul  li a { width:175px; font-weight:normal; color:#ffffff; }
+
+#nav li:hover, #nav li.over { 
+position: static; /* make menus not sticky in IE7 */ 
+} 
+
+#footer-text{ text-align: center; color: blue; }
